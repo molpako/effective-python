@@ -157,6 +157,7 @@ class LineCountGenericWorker(GenericWorker):
     def reduce(self, other):
         self.result += other.result
 
+
 def generic_mapreduce(worker_cls, input_cls, config):
     workers = worker_cls.create_workers(input_cls, config)
     return execute(workers)
