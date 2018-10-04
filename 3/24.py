@@ -105,7 +105,7 @@ class GenericInputData(object):
         raise NotImplementedError
     
     @classmethod
-    def generate_input(cls, config):
+    def generate_inputs(cls, config):
         """設定パラメータの辞書をもらう"""
         raise NotImplementedError
 
@@ -156,6 +156,7 @@ class LineCountGenericWorker(GenericWorker):
 
     def reduce(self, other):
         self.result += other.result
+
 
 def generic_mapreduce(worker_cls, input_cls, config):
     workers = worker_cls.create_workers(input_cls, config)

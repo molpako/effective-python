@@ -13,7 +13,7 @@ class MyChildClass(MyBaseClass):
 # 規定されていいないこと。
 class TimesTwo(object):
     def __init__(self):
-        (self.value *= 2
+        self.value *= 2
 
 class PlusFive(object):
     def __init__(self):
